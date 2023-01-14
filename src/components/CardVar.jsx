@@ -1,14 +1,8 @@
 import React, { Children } from 'react';
+import Videos from '../pages/Videos';
 import VideoCard from './videoCard';
-export function AppWrap(){
-    return (
-        <CardVar>
-        <VideoCard />
-        </CardVar>
-    )
-} 
 
-export  function CardVar() {
+export  function CardVar({children}) {
     return (
         <div className='flex flex-col'>
            {children} 

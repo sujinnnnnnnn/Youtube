@@ -26,15 +26,15 @@ export default function Videos() {
 //   let filtered =  getData(data,keyword);
 //   console.log(data);
     return (
-        <div>
+        <>
             {keyword ? `🔍${keyword}` : '🔥'}
             {isLoding && <p>loading...</p>}
             {error && <p>Somthing is wrong</p>}
-            {videos && <ul>
-                 {videos.map(video => <VideoCard key={video.id} video={video}/>)}
+            {videos && <ul className='grid grid-cols-4'>
+                 {videos.map(video => <VideoCard className="w-100 h-100" key={video.id} video={video}/>)}
                  </ul>
                  }
-        </div>
+        </>
     );
 }
 

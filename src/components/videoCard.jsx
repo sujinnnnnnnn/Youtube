@@ -1,9 +1,10 @@
 import React from 'react';
+import { CardVar } from './CardVar';
 // 카드 우산 씌워서 모양은 같게 내용은 다르게 만들기
 export default function VideoCard({video}) {
     const setTime = ()=>{
-    const timeAgo = (new Date() -new Date(video.snippet.publishTime)) / 1000
-    console.log(timeAgo / (60 * 60 * 24 * 365));
+    const timeAgo = (new Date() -new Date(video.snippet.publishedAt)) / 1000
+    // console.log(timeAgo / (60 * 60 * 24 * 365));
     // console.log(new Date(timeAgo).getMonth());
     const times = [
         { name: 'years', milliSeconds: 60 * 60 * 24 * 365 },
@@ -17,13 +18,15 @@ export default function VideoCard({video}) {
         if(betweenTimes > 0){
             if(betweenTimes === 1){
                 const cahnge = value.name.substring(0,value.name.length-1)
-                return `${betweenTimes}${cahnge} ago`
+                return `${betweenTimes} ${cahnge} ago`
             }
-            return `${betweenTimes}${value.name} ago`
+            return `${betweenTimes} ${value.name} ago`
         }
-        // console.log(betweenTimes);
-     }
+       
     }
+    return "Just before"
+     }
+    
     // console.log(new Date(timeAgo).getDate());
     // console.log(new Date(timeAgo).getHours());
     //현재시간을 기준으로 발행시간을 빼면 남는 시간이 
@@ -32,16 +35,17 @@ export default function VideoCard({video}) {
     //1년보다 작으면  -  ' 'months ago
     //1년보다 크면 ''years age
     return (
-
-       <li>
+       <li className='flex flex-col m-2'>
         <img 
         src={video.snippet.thumbnails.default.url} 
         alt="thumbnails" 
         />
-        {video.snippet.title}
-        {video.snippet.channelTitle}
-        {setTime()}
+        <br></br>
+        <div>{video.snippet.title}</div>
+        <div>{video.snippet.channelTitle}</div>
+        <div>{setTime()}</div>
         </li>
+        
     );
 }
 

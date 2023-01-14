@@ -8,6 +8,7 @@ import {
     useQuery,
   } from '@tanstack/react-query'
 import { YoutubeApiProvider } from './context/YoutubeApiContext';
+import { CardVar } from './CardVar';
   const queryClient = new QueryClient();
 export default function Root() {
     return (
@@ -16,9 +17,9 @@ export default function Root() {
             <Navvar />
             <YoutubeApiProvider>
             <QueryClientProvider client={queryClient}>
-       
+            <CardVar>
             <Outlet />
-               
+            </CardVar>
             </QueryClientProvider>
             </YoutubeApiProvider> 
         </>
