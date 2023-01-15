@@ -30,7 +30,7 @@ export default function Videos() {
             {keyword ? `🔍${keyword}` : '🔥'}
             {isLoding && <p>loading...</p>}
             {error && <p>Somthing is wrong</p>}
-            {videos && <ul className='grid grid-cols-4'>
+            {videos && <ul className='grid grid-cols-5 max-xl:grid-col-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1'>
                  {videos.map(video => <VideoCard className="w-100 h-100" key={video.id} video={video}/>)}
                  </ul>
                  }

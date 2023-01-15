@@ -1,31 +1,18 @@
-import React from 'react';
-import { CardVar } from './CardVar';
-// 카드 우산 씌워서 모양은 같게 내용은 다르게 만들기
+import React, { useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import { formatAgo } from './api/date';
 export default function VideoCard({video}) {
-    const setTime = ()=>{
-    const timeAgo = (new Date() -new Date(video.snippet.publishedAt)) / 1000
-    // console.log(timeAgo / (60 * 60 * 24 * 365));
-    // console.log(new Date(timeAgo).getMonth());
-    const times = [
-        { name: 'years', milliSeconds: 60 * 60 * 24 * 365 },
-        { name: 'months', milliSeconds: 60 * 60 * 24 * 30 },
-        { name: 'days', milliSeconds: 60 * 60 * 24 },
-        { name: 'hours', milliSeconds: 60 * 60 },
-        { name: 'minutes', milliSeconds: 60 },
-      ];
-     for(let value of times) {
-        const betweenTimes = Math.floor(timeAgo / value.milliSeconds)
-        if(betweenTimes > 0){
-            if(betweenTimes === 1){
-                const cahnge = value.name.substring(0,value.name.length-1)
-                return `${betweenTimes} ${cahnge} ago`
-            }
-            return `${betweenTimes} ${value.name} ago`
-        }
-       
-    }
-    return "Just before"
-     }
+    const {title , thumbnails, publishedAt } =video.snippet
+    //
+    const [click, setClick] =useState(false);
+    const{videoId} =useParams();
+    const navigate = useNavigate();
+    
+    //클릭을 하는 순간 해당 컨텐츠 id로 가야함
+   const handleClick = (e) => {
+    navigate(`/videos/watch/${video.id}`) // 라우트로 지정해놓은 경로로 이동 
+   }
+console.log(video.id);
     
     // console.log(new Date(timeAgo).getDate());
     // console.log(new Date(timeAgo).getHours());
@@ -35,15 +22,18 @@ export default function VideoCard({video}) {
     //1년보다 작으면  -  ' 'months ago
     //1년보다 크면 ''years age
     return (
-       <li className='flex flex-col m-2'>
+       <li  
+       className='flex flex-col m-2 cursor-pointer'
+       onClick={handleClick}
+       >
         <img 
-        src={video.snippet.thumbnails.default.url} 
-        alt="thumbnails" 
+        className='w-full mb-2'
+        src={thumbnails.high.url} 
+        alt={title} 
         />
-        <br></br>
-        <div>{video.snippet.title}</div>
-        <div>{video.snippet.channelTitle}</div>
-        <div>{setTime()}</div>
+        <div className='font-semibold my-2 line-clamp-2'>{title}</div>
+        <div className='mb-1 text-sm opacity-80'>{title}</div>
+        <div className='mb-1 text-sm opacity-80'>{formatAgo(publishedAt,'ko')}</div>
         </li>
         
     );
