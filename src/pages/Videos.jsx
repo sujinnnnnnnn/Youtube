@@ -16,7 +16,6 @@ export default function Videos() {
 
     return (
         <>
-             <img src="https://yt3.ggpht.com/TcXFMFkDeUN8pDqZ-2WShXiG6lXtpoRG2kfRMg3Nd9g947mESyRYqlWtwcoy9FyjiiLVLaTd=s88-c-k-c0x00ffffff-no-rj"/>
             {keyword ? `🔍${keyword}` : '🔥'}
             {isLoding && <p>loading...</p>}
             {error && <p>Somthing is wrong</p>}
