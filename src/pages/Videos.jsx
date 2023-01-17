@@ -4,34 +4,24 @@ import React, { useEffect, useState, } from 'react';
 import {useParams} from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import VideoCard from '../components/videoCard';
-import Youtube, { search } from '../components/api/youtube';
-import FakeYoutube from '../components/api/fakeYoutubeClient';
 import { useYoutubeApi } from '../components/context/YoutubeApiContext';
 export default function Videos() {
-    // const [data,setData] = useState([])
+   
     const {youtube} =useYoutubeApi()
     console.log(youtube);
     const {keyword} = useParams();
     const {isLoding,error,data:videos} =useQuery(
-        ['videos',keyword], ()=>youtube.search(keyword)
+        ['videos',keyword], ()=>youtube.search(keyword),{staleTime: 100 * 60 * 1} // staletiem늘려서 다른창 갔다오면 새로 받아와지는 거 막기
     )
-     console.log(youtube);
-     console.log(keyword);
-  //여기에 해당 내용이 보내짐 
-  
-//   useEffect(()=>{
-//     axios.get(`/videos/${keyword ? 'search.json' :'popular.json' }`)
-//     .then(res=>setData(res.data.items))
-//   },[keyword])
-//   let filtered =  getData(data,keyword);
-//   console.log(data);
+
     return (
         <>
+             <img src="https://yt3.ggpht.com/TcXFMFkDeUN8pDqZ-2WShXiG6lXtpoRG2kfRMg3Nd9g947mESyRYqlWtwcoy9FyjiiLVLaTd=s88-c-k-c0x00ffffff-no-rj"/>
             {keyword ? `🔍${keyword}` : '🔥'}
             {isLoding && <p>loading...</p>}
             {error && <p>Somthing is wrong</p>}
             {videos && <ul className='grid grid-cols-5 max-xl:grid-col-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1'>
-                 {videos.map(video => <VideoCard className="w-100 h-100" key={video.id} video={video}/>)}
+                 {videos.map(video => <VideoCard className='w-100 h-100' key={video.id} video={video}/>)}
                  </ul>
                  }
         </>

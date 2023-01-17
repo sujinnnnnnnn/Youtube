@@ -21,3 +21,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.divide1{
+width: 70%;
+}
+.divide2{
+width: 30%;
+}
+@media all and (max-width: 1024px){
+	
+}
+@media all and (max-width: 768px){
+	
+}
+@media all and (min-width: 768px){
+	
+}
+@media all and (min-width: 1024px){
+	
+}

@@ -1,42 +1,181 @@
 {
-  "kind": "youtube#channelListResponse",
-  "etag": "ahCbwE3h-dZ46pGvA_d37NS3pAs",
+  "kind": "youtube#searchListResponse",
+  "etag": "6ZMs1Z3MyDUvuln2lSiAhBBOt6w",
+  "nextPageToken": "CAUQAA",
+  "regionCode": "KR",
   "pageInfo": {
-    "totalResults": 1,
+    "totalResults": 5843,
     "resultsPerPage": 5
   },
   "items": [
     {
-      "kind": "youtube#channel",
-      "etag": "vXzqU0oVDLdk4SQxVthbMCu9y6s",
-      "id": "UCx-KWLTKlB83hDI6UKECtJQ",
+      "kind": "youtube#searchResult",
+      "etag": "2xZAFdiAXJuudtDtNIEgEveEcZI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pBFQdxA-apI"
+      },
       "snippet": {
-        "title": "HBO Max",
-        "description": "HBO Max is the premium streaming platform that bundles together all of HBO with even more of your favorite movies and TV shows from Warner Bros. Discovery, New Line, DC, CNN, TNT, TBS, truTV, Turner Classic Movies, Cartoon Network, Adult Swim, Crunchyroll, Rooster Teeth, Looney Tunes, and much more. Enjoy all of this, plus an exciting lineup of new original programming with Max Originals, all in one place.",
-        "customUrl": "@hbomax",
-        "publishedAt": "2019-07-03T14:47:23Z",
+        "publishedAt": "2013-12-17T18:58:11Z",
+        "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+        "title": "Introduction to Google Drive API",
+        "description": "Check out this video to learn more about the benefits of using the Drive API in your app.",
         "thumbnails": {
           "default": {
-            "url": "https://yt3.ggpht.com/TcXFMFkDeUN8pDqZ-2WShXiG6lXtpoRG2kfRMg3Nd9g947mESyRYqlWtwcoy9FyjiiLVLaTd=s88-c-k-c0x00ffffff-no-rj",
-            "width": 88,
-            "height": 88
+            "url": "https://i.ytimg.com/vi/pBFQdxA-apI/default.jpg",
+            "width": 120,
+            "height": 90
           },
           "medium": {
-            "url": "https://yt3.ggpht.com/TcXFMFkDeUN8pDqZ-2WShXiG6lXtpoRG2kfRMg3Nd9g947mESyRYqlWtwcoy9FyjiiLVLaTd=s240-c-k-c0x00ffffff-no-rj",
-            "width": 240,
-            "height": 240
+            "url": "https://i.ytimg.com/vi/pBFQdxA-apI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
           },
           "high": {
-            "url": "https://yt3.ggpht.com/TcXFMFkDeUN8pDqZ-2WShXiG6lXtpoRG2kfRMg3Nd9g947mESyRYqlWtwcoy9FyjiiLVLaTd=s800-c-k-c0x00ffffff-no-rj",
-            "width": 800,
-            "height": 800
+            "url": "https://i.ytimg.com/vi/pBFQdxA-apI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
           }
         },
-        "localized": {
-          "title": "HBO Max",
-          "description": "HBO Max is the premium streaming platform that bundles together all of HBO with even more of your favorite movies and TV shows from Warner Bros. Discovery, New Line, DC, CNN, TNT, TBS, truTV, Turner Classic Movies, Cartoon Network, Adult Swim, Crunchyroll, Rooster Teeth, Looney Tunes, and much more. Enjoy all of this, plus an exciting lineup of new original programming with Max Originals, all in one place."
+        "channelTitle": "Google Developers",
+        "liveBroadcastContent": "none",
+        "publishTime": "2013-12-17T18:58:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "g-OkclZW7c3d362uUQfAVXCT67M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_ACWeGGBP4E"
+      },
+      "snippet": {
+        "publishedAt": "2018-12-05T12:58:59Z",
+        "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+        "title": "Abbey Road Studios (Flutter Developer Story)",
+        "description": "Abbey Road knew of a problem they were looking to solve. Too often, an idea for a new track or song lyrics appear in your head in ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_ACWeGGBP4E/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_ACWeGGBP4E/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_ACWeGGBP4E/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
         },
-        "country": "US"
+        "channelTitle": "Google Developers",
+        "liveBroadcastContent": "none",
+        "publishTime": "2018-12-05T12:58:59Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "MoaxwwJjlkRI0y-TLZ8Ju-7k_IE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "l-YO9CmaSUM"
+      },
+      "snippet": {
+        "publishedAt": "2019-09-17T19:11:50Z",
+        "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+        "title": "How is Flutter different for app development",
+        "description": "In this video, hear Martin Aguinis from the Flutter team discuss what goes on under the hood when you create apps with Flutter ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/l-YO9CmaSUM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/l-YO9CmaSUM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/l-YO9CmaSUM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Google Developers",
+        "liveBroadcastContent": "none",
+        "publishTime": "2019-09-17T19:11:50Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "SIsdmks4koIYJllOOASqomsy6rc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "T4Uehk3_wlY"
+      },
+      "snippet": {
+        "publishedAt": "2019-01-01T17:30:10Z",
+        "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+        "title": "FittedBox (Flutter Widget of the Week)",
+        "description": "Most Flutter widgets are boxes. FittedBox helps with managing the space constraints and layout of your boxes. This video is also ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/T4Uehk3_wlY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/T4Uehk3_wlY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/T4Uehk3_wlY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Google Developers",
+        "liveBroadcastContent": "none",
+        "publishTime": "2019-01-01T17:30:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "vTe7EOj2-FKO8nK98kqDDL0pk0o",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ZbnI4E3F_l4"
+      },
+      "snippet": {
+        "publishedAt": "2022-01-04T11:00:13Z",
+        "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+        "title": "Google’s Coding Competitions - Check out challenges for all skill levels",
+        "description": "Google's Coding Competitions are back! Kick Start, Hash Code, and Code Jam return for another exciting season - try your hand ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ZbnI4E3F_l4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ZbnI4E3F_l4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ZbnI4E3F_l4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Google Developers",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-01-04T11:00:13Z"
       }
     }
   ]

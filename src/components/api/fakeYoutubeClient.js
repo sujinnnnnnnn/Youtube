@@ -4,11 +4,17 @@ export default class FakeYoutube {
     
     }
      async search (){ 
-      return axios.get('search/videos/search.json', )
+      return axios.get('/videos/search.json')
        }
        async videos (){ 
-         return axios.get('search/videos/popular.json', )
+         return axios.get('/videos/popular.json', )
           }  
+      async channels(){
+        return axios.get('/videos/channel.json')
+      }    
+      async related(){
+        return axios.get('/videos/related.json')
+      }
 //      async #searchByKeyWord(){
 //         return axios.get(`/videos/search.json`)
 //         .then(data=>data.data.items)
